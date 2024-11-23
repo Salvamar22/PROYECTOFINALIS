@@ -1,0 +1,159 @@
+header {
+    background-color: #194f90;
+}
+
+.texto-slider-sombra {
+    color: white;
+    text-shadow: 2px 2px 2px #000;
+}
+
+#quienes {
+    border-radius: 5px;
+}
+
+.nosotros {
+    text-align: justify;
+    line-height: 2em;
+}
+
+.contactanos {
+    background-color: #194f90;
+    color: white;
+}
+
+/* Estilo de Contador con Texto 3D */
+.texto3d {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#texto3d h1 {
+    font-weight: bold;
+    font-size: 750px;
+    font-family: "Arial";
+    text-shadow: 0 1px 0 #ccc,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0, 0, 0, .1),
+        0 0 5px rgba(0, 0, 0, .1),
+        0 1px 3px rgba(0, 0, 0, .3),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .25),
+        0 10px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
+    color: #194f90;
+    text-align: center;
+}
+
+/* Estilo general para elementos ocultos */
+.hide-element {
+    display: none;
+}
+
+/* Estilo para el mensaje de error */
+.error-message {
+    color: red; 
+    margin-bottom: 0; 
+    font-weight: bold;
+}
+
+/* Estilo para el mensaje correcto */
+.success-message {
+    color: green; 
+    margin-bottom: 0; 
+    font-weight: bold;
+}
+
+/* Estilo para el mensaje de éxito */
+.mensaje-exito {
+    display: none;
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Estilo para el mensaje de error */
+.mensaje-error {
+    display: none;
+    background-color: #b12c2c;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Estilo para las tablas en vertical para Tablets y/o móviles */
+@media screen and (max-width: 1024px) {
+
+    table {
+        display: block;
+        width: 100%;
+    }
+
+    table thead,
+    table tbody,
+    table th,
+    table td,
+    table tr {
+        display: block;
+    }
+
+    table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    table tr {
+        border: 1px solid #ccc;
+        margin-bottom: 5px;
+    }
+
+    table td {
+        display: absolute;
+        padding-left: 5px;
+        text-align: left;
+        white-space: normal;
+    }
+
+    table td::before {
+        content: attr(data-title);
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    /* Cambiar o eliminar estilos de text-truncate y max-width */
+
+    table td.text-truncate {
+        overflow: visible !important;
+        text-overflow: initial !important;
+        white-space: normal !important;
+        max-width: none !important;
+    }
+
+    table td.actions-cell {
+        position: relative;
+    }
+    
+    table td.actions-cell::before {
+        content: attr(data-title);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        background-color: #f9f9f9;
+    }
+}
